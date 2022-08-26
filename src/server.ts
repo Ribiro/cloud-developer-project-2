@@ -15,7 +15,7 @@ import {filterImageFromURL, deleteLocalFiles} from './util/util';
 
   // @TODO1 IMPLEMENT A RESTFUL ENDPOINT
   app.get("/filteredImage", async (req, res) => {
-    const image_url = req.query.image_url.toString();
+    const image_url: string = req.query.image_url.toString();
     if (!image_url) {
       res.status(400).send('image url not found')
     }
